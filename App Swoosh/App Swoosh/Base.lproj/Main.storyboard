@@ -14,10 +14,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,12 +28,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ihD-nF-dNb">
                                 <rect key="frame" x="128" y="40" width="119" height="20"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgr-hX-Xbk">
-                                <rect key="frame" x="88" y="123" width="199" height="55"/>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DBq-lT-wxq">
                                 <rect key="frame" x="65" y="179" width="245" height="34.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="25"/>
@@ -64,6 +58,12 @@
                                     <segue destination="4W4-Xa-dAn" kind="show" id="dWd-VO-ixQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GO ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgr-hX-Xbk">
+                                <rect key="frame" x="87" y="124" width="200" height="55"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,30 +74,26 @@
                             <constraint firstItem="d6t-t9-Liz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9jA-vq-zbR"/>
                             <constraint firstItem="ihD-nF-dNb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Gly-e6-Mri"/>
                             <constraint firstItem="DBq-lT-wxq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H12-jr-phJ"/>
-                            <constraint firstItem="DBq-lT-wxq" firstAttribute="top" secondItem="Cgr-hX-Xbk" secondAttribute="bottom" constant="1" id="J6M-Li-t4x"/>
+                            <constraint firstItem="DBq-lT-wxq" firstAttribute="top" secondItem="Cgr-hX-Xbk" secondAttribute="bottom" id="J6M-Li-t4x"/>
                             <constraint firstItem="d6t-t9-Liz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Nqe-cG-Rjh"/>
-                            <constraint firstItem="Cgr-hX-Xbk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PaM-S2-C4B"/>
+                            <constraint firstItem="Cgr-hX-Xbk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-0.5" id="PaM-S2-C4B"/>
                             <constraint firstItem="ihD-nF-dNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Qta-RU-3La"/>
                             <constraint firstItem="W9D-Ho-68m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="c9j-l4-aSf"/>
                             <constraint firstItem="4Ak-SF-lAL" firstAttribute="top" secondItem="DBq-lT-wxq" secondAttribute="bottom" constant="28.5" id="ooV-tT-zPY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="W9D-Ho-68m" secondAttribute="bottom" constant="20" id="qVC-2C-DBV"/>
-                            <constraint firstItem="Cgr-hX-Xbk" firstAttribute="top" secondItem="ihD-nF-dNb" secondAttribute="bottom" constant="63" id="tdI-WI-VZe"/>
+                            <constraint firstItem="Cgr-hX-Xbk" firstAttribute="top" secondItem="ihD-nF-dNb" secondAttribute="bottom" constant="64" id="tdI-WI-VZe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="bgImg" destination="d6t-t9-Liz" id="fdN-9V-ozU"/>
-                        <outlet property="swoosh" destination="ihD-nF-dNb" id="6D6-vr-YnM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="hZO-L5-ML4">
             <objects>
-                <viewController id="4W4-Xa-dAn" sceneMemberID="viewController">
+                <viewController id="4W4-Xa-dAn" customClass="LeagueVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1E6-yw-a2r">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,6 +172,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTouch:" destination="4W4-Xa-dAn" eventType="touchUpInside" id="DJr-d7-lV0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NwR-zo-NaQ">
                                 <rect key="frame" x="0.0" y="30" width="46" height="30"/>
@@ -192,18 +191,19 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="4Yt-K0-pyf" secondAttribute="bottom" constant="20" symbolic="YES" id="4Zw-zo-B6n"/>
-                            <constraint firstItem="DGm-YW-ktc" firstAttribute="top" secondItem="1E6-yw-a2r" secondAttribute="top" constant="156" id="HBq-9v-xw9"/>
+                            <constraint firstItem="RKX-x7-eyK" firstAttribute="trailing" secondItem="MaQ-Nh-bqK" secondAttribute="trailing" id="DHz-Na-rry"/>
                             <constraint firstItem="7yk-7x-BVh" firstAttribute="bottom" secondItem="MaQ-Nh-bqK" secondAttribute="bottom" id="I5h-gk-mU1"/>
+                            <constraint firstItem="4Yt-K0-pyf" firstAttribute="top" secondItem="DGm-YW-ktc" secondAttribute="bottom" constant="252" id="OxW-f3-RSO"/>
                             <constraint firstItem="7yk-7x-BVh" firstAttribute="trailing" secondItem="4Yt-K0-pyf" secondAttribute="trailing" id="PTZ-2b-02y"/>
                             <constraint firstItem="DGm-YW-ktc" firstAttribute="top" secondItem="RKX-x7-eyK" secondAttribute="bottom" constant="50" id="VlQ-8O-b3O"/>
                             <constraint firstItem="DGm-YW-ktc" firstAttribute="trailing" secondItem="4Yt-K0-pyf" secondAttribute="trailing" id="Wwo-Fd-WQ0"/>
                             <constraint firstItem="DGm-YW-ktc" firstAttribute="leading" secondItem="4Yt-K0-pyf" secondAttribute="leading" id="aIs-ic-1ud"/>
                             <constraint firstItem="7yk-7x-BVh" firstAttribute="leading" secondItem="4Yt-K0-pyf" secondAttribute="leading" id="fhj-Lh-SgD"/>
+                            <constraint firstItem="RKX-x7-eyK" firstAttribute="leading" secondItem="MaQ-Nh-bqK" secondAttribute="leading" id="gl0-tE-Jo3"/>
                             <constraint firstItem="NwR-zo-NaQ" firstAttribute="leading" secondItem="MaQ-Nh-bqK" secondAttribute="leading" id="hoE-qr-QWV"/>
                             <constraint firstItem="NwR-zo-NaQ" firstAttribute="top" secondItem="MaQ-Nh-bqK" secondAttribute="top" constant="10" id="j8s-AK-kTu"/>
                             <constraint firstItem="7yk-7x-BVh" firstAttribute="top" secondItem="1E6-yw-a2r" secondAttribute="top" id="jOd-Zh-c1j"/>
                             <constraint firstItem="RKX-x7-eyK" firstAttribute="trailing" secondItem="DGm-YW-ktc" secondAttribute="trailing" id="kAe-zv-SMa"/>
-                            <constraint firstAttribute="bottom" secondItem="DGm-YW-ktc" secondAttribute="bottom" constant="321" id="lYD-sl-brt"/>
                             <constraint firstItem="RKX-x7-eyK" firstAttribute="leading" secondItem="DGm-YW-ktc" secondAttribute="leading" id="mWA-qJ-anB"/>
                             <constraint firstItem="RKX-x7-eyK" firstAttribute="top" secondItem="MaQ-Nh-bqK" secondAttribute="top" constant="20" id="q7p-8A-Gkg"/>
                             <constraint firstItem="7yk-7x-BVh" firstAttribute="leading" secondItem="1E6-yw-a2r" secondAttribute="leading" id="wVt-Mp-J24"/>
@@ -211,16 +211,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="MaQ-Nh-bqK"/>
                     </view>
+                    <connections>
+                        <segue destination="34W-sU-X95" kind="show" identifier="skillVCSegue" id="azY-Ly-XYQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iUv-hc-dyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="anO-5p-GsD" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="932" y="123"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="N2M-TX-BjH">
             <objects>
-                <viewController id="34W-sU-X95" sceneMemberID="viewController">
+                <viewController id="34W-sU-X95" customClass="SkillVC" customModule="App_Swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="z1f-2I-XAi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
