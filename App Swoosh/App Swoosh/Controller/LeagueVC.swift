@@ -10,6 +10,7 @@ import UIKit
 
 class LeagueVC: UIViewController {
     
+    @IBOutlet var ddw: BorderButton!
     var player: Player!
     
     
@@ -27,18 +28,31 @@ class LeagueVC: UIViewController {
 
     }
     
+  
+    @IBAction func onNextTouch(_ sender: Any) {
+        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    }
+    
+    //function to set the leagure and enable the button
+    func selectLeague(leagueType: String) {
+        player.desiredLeague = leagueType
+        nextBtn.isEnabled = true
+    }
+    
+    //view did load
     override func viewDidLoad() {
         super.viewDidLoad()
         player = Player()
     }
 
-    @IBAction func onNextTouch(_ sender: Any) {
-        performSegue(withIdentifier: "skillVCSegue", sender: self)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //this will try and run this statement
+        if let skillVC = segue.destination as? SkillVC {
+            //handing off the player variable to the skillVC player
+            skillVC.player = player
+        }
     }
-    func selectLeague(leagueType: String) {
-        player.desiredLeague = leagueType
-        nextBtn.isEnabled = true
-    }
+    
 
 }
 
